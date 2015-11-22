@@ -1,0 +1,25 @@
+{# src/Jukebox/JukeboxBundle/Resources/views/Jukebox/list.html.twig #}
+{% extends "JukeboxJukeboxBundle::layout.html.twig" %}
+{% block title %}List of Artistas{% endblock %}
+
+{% block body %}
+    {% for artista in artistas %}
+        <article class="artista">
+            <div class="date"><time datetime="{{ artista.fechanacimiento|date('c') }}">{{ artista.fechanacimiento|date('l, F j, Y') }}</time></div>
+            <header>
+                <h2><a href="{{ path('jukebox_jukebox_show', { 'id': artista.id }) }}">{{ artista.nombre }}</a></h2>
+            </header>
+
+            <div class="snippet">
+                <p>{{ artista.descripcion(200) }}</p>
+                <p class="continue"><a href="{{ path('jukebox_jukebox_show', { 'id': artista.id }) }}">Seguir leyendo...</a></p>
+            </div>
+
+            <footer class="meta">
+                <p>Comentarios: -</p>
+            </footer>
+        </article>
+    {% else %}
+        <p>No hay entradas en este jukebox</p>
+    {% endfor %}
+{% endblock %}

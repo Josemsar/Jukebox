@@ -1,0 +1,15 @@
+{# src/Jukebox/JukeboxBundle/Resources/views/Jukebox/show.html.twig #}
+{% extends "JukeboxJukeboxBundle::layout.html.twig" %}
+{% block title %}Artista{% endblock %}
+
+{% block body %}
+	<h1>{{artista.nombre}}</h1>
+
+	<div class="date">{{artista.fechanacimiento|date('d-m-Y')}}</div>
+
+	<div class="body">
+		{{artista.descripcion}}
+</section>
+
+	</div>
+{% endblock %}

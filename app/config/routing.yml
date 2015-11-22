@@ -1,0 +1,3 @@
+jukebox_jukebox:
+    resource: "@JukeboxJukeboxBundle/Resources/config/routing.yml"
+    prefix:   /

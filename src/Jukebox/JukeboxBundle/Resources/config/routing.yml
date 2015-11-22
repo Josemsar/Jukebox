@@ -1,0 +1,11 @@
+jukebox_jukebox_list:
+    pattern: /
+    defaults: { _controller: JukeboxJukeboxBundle:Jukebox:list }
+
+jukebox_jukebox_show:
+    pattern: /show/{id}
+    defaults: { _controller: JukeboxJukeboxBundle:Jukebox:show }
+
+jukebox_jukebox_contact:
+    path:  /contact
+    defaults: { _controller: JukeboxJukeboxBundle:Jukebox:contact }
